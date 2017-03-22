@@ -10,16 +10,22 @@ package net.projeto.gerador;
  * @author tfoliveira
  */
 public class GeradorNumero {
-    public int[] geraArray(int tamanho,int max,int min){
-        int[] valores = new int[tamanho];
+    public Integer[] geraArrayAleatorio(int tamanho,int max,int min){
+        Integer[] valores = new Integer[tamanho];
         for(int i=0;i<tamanho;i++)
                 valores[i]=geraValor(max,min);
         return valores;
     }
-    public int[] geraArrayOrdenado(int tamanho,int max,int min){
-        int[] valores = new int[tamanho];
+    public Integer[] geraArrayMelhorCaso(int tamanho,int max,int min){
+        Integer[] valores = new Integer[tamanho];
         for(int i=0;i<tamanho;i++)
                 valores[i]=i;
+        return valores;
+    }
+    public Integer[] geraArrayPiorCaso(int tamanho,int max,int min){
+        Integer[] valores = new Integer[tamanho];
+        for(int i=0;i<tamanho;i++)
+                valores[i]=tamanho-i;
         return valores;
     }
     private int geraValor(int max,int min){
